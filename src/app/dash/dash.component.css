@@ -1,0 +1,50 @@
+.grid-container {
+  margin: 10px;
+}
+
+.dashboard-card {
+  font-size-adjust: inherit;
+  position: center;
+  top: 10px;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
+  background: #def2f1;
+}
+
+.dashboard-card-content {
+  background: #def2f1;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  display: block;
+}
+
+.div-color {
+  background: rgb(119, 201, 212);
+  background: linear-gradient(
+    0deg,
+    rgba(119, 201, 212, 1) 0%,
+    rgba(87, 188, 144, 1) 100%
+  );
+}
+.card-greenDark {
+  background-color: #015249;
+}
+.card-green {
+  background-color: #57bc90;
+}
+.card-cyan {
+  background-color: #77c9d4;
+}
+
+.z-depth {
+  width: 350px;
+}
+.z-depth:hover {
+  box-shadow: 0 8px 8px 8px rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.14),
+    0 8px 8px 0 rgba(0, 0, 0, 0.12) !important;
+  transform: translate3d(0, 0, 0);
+  transition: background 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+    box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);
+}
