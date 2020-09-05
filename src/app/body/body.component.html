@@ -44,19 +44,20 @@
           aria-controls="navbarTogglerDemo01"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          (click)="isCollapsed = !isCollapsed"
         >
           <span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo01"
+          [ngbCollapse]="isCollapsed"
+        >
           <div
             class="d-lg-none d-flex justify-content-between px-4 py-3 align-items-center"
           >
-            <img
-              src="/assets/images/logo-dark.svg"
-              class="logo-mobile-menu"
-              alt="logo"
-            />
-            <a href="javascript:;" class="close-menu"
+            <p>Menu</p>
+            <a (click)="isCollapsed = !isCollapsed" class="close-menu"
               ><i class="mdi mdi-close"></i
             ></a>
           </div>
@@ -86,10 +87,12 @@
       <section id="home" class="home">
         <div>
           <video
-          preload="auto"
+            preload="auto"
             width="100%"
             style="margin-top: 0px; margin-bottom: 20px"
-            autoPlay loop [muted]=true
+            autoPlay
+            loop
+            [muted]="true"
           >
             <source src="\assets\img\video.mp4" type="video/mp4" />
             <source src="\assets\img\video.ogg" type="video/ogg" />
@@ -100,20 +103,6 @@
           <div class="row">
             <div class="col-sm-12">
               <div class="d-sm-flex justify-content-between">
-                <div data-aos="zoom-in-up">
-                  <div class="banner-title">
-                    <h3 class="font-weight-medium text-dark mb-5">
-                      Te ayudamos en el camino a la Transformacion Digital
-                    </h3>
-                  </div>
-                  <p class="text-dark">
-                    Con las distintas herramientas que contamos, nuestra
-                    expertis y el grupo de gente que nos acompaña
-                    <br />
-                    podemos ayudarte a alcanzar los objetivos que te plantees.
-                  </p>
-                  <a href="#" class="btn btn-secondary mt-3">Learn more</a>
-                </div>
                 <div class="mt-5 mt-lg-0">
                   <img
                     src="/assets/img/Software Suite.jpg"
@@ -128,138 +117,143 @@
         </div>
       </section>
       <section class="our-services" id="services">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12">
-              <h5 class="text-dark">¿Que ofrecemos?</h5>
-              <h3 class="font-weight-medium text-dark mb-5">
-                Algunos de nuestros servicios
-              </h3>
-            </div>
-          </div>
-          <div class="row" data-aos="fade-up" scrollBar:true>
-            <div class="col-sm-4 text-center text-lg-left">
-              <div
-                class="services-box"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <img
-                  src="/assets/img/icons-web.png"
-                  alt="integrated-marketing"
-                  data-aos="zoom-in"
-                />
-                <h6 class="text-dark mb-3 mt-4 font-weight-medium">
-                  Diseño Web
-                </h6>
-                <p>
-                  Diseñamos y adaptamos una web a tus necesidades. Estaticas,
-                  Marketplaces, Portfolios...
-                </p>
+        <div class="div-color">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h5 class="text-dark">¿Que ofrecemos?</h5>
+                <h3 class="font-weight-medium text-dark mb-5">
+                  Algunos de nuestros servicios
+                </h3>
               </div>
             </div>
-            <div class="col-sm-4 text-center text-lg-left">
-              <div
-                class="services-box"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <img
-                  src="/assets/img/icons-sistemas.png"
-                  alt="design-development"
-                  data-aos="zoom-in"
-                />
-                <h6 class="text-dark mb-3 mt-4 font-weight-medium">
-                  Desarrollo de Sistemas
-                </h6>
-                <p>
-                  Desde pequeños hasta grandes y complejos sistemas. Sistemas de
-                  Cobro, Stock, Automatizaciones...
-                </p>
+            <div class="row" data-aos="fade-up" scrollBar:true>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-web.png"
+                    alt="integrated-marketing"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Diseño Web
+                  </h6>
+                  <p>
+                    Diseñamos y adaptamos una web a tus necesidades. Estaticas,
+                    Marketplaces, Portfolios...
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-sistemas.png"
+                    alt="design-development"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Desarrollo de Sistemas
+                  </h6>
+                  <p>
+                    Desde pequeños hasta grandes y complejos sistemas. Sistemas
+                    de Cobro, Stock, Automatizaciones...
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-cloud.png"
+                    alt="digital-strategy"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">Cloud</h6>
+                  <p>
+                    Servidores en tu negocio? No, mejor Cloud. Podemos
+                    acesorarte y contarte la infinidad de posibilidades...
+                  </p>
+                </div>
               </div>
             </div>
-            <div class="col-sm-4 text-center text-lg-left">
-              <div
-                class="services-box"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <img
-                  src="/assets/img/icons-cloud.png"
-                  alt="digital-strategy"
-                  data-aos="zoom-in"
-                />
-                <h6 class="text-dark mb-3 mt-4 font-weight-medium">Cloud</h6>
-                <p>
-                  Servidores en tu negocio? No, mejor Cloud. Podemos acesorarte
-                  y contarte la infinidad de posibilidades...
-                </p>
+            <div class="row" data-aos="fade-up">
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box pb-lg-0"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-consultoria.png"
+                    alt="digital-marketing"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Consultoria
+                  </h6>
+                  <p>
+                    Podemos brindarte la mejor solucion y optimizar tu negocio.
+                    Mejora de Procesos, Agile...
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="row" data-aos="fade-up">
-            <div class="col-sm-4 text-center text-lg-left">
-              <div
-                class="services-box pb-lg-0"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <img
-                  src="/assets/img/icons-consultoria.png"
-                  alt="digital-marketing"
-                  data-aos="zoom-in"
-                />
-                <h6 class="text-dark mb-3 mt-4 font-weight-medium">
-                  Consultoria
-                </h6>
-                <p>
-                  Podemos brindarte la mejor solucion y optimizar tu negocio.
-                  Mejora de Procesos, Agile...
-                </p>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box pb-lg-0"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-clientes.png"
+                    alt="growth-strategy"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Clientes
+                  </h6>
+                  <p>
+                    Te damos un acceso exclusivo a nuestra web para que siempre
+                    puedas tener todo actualizado. Documentacion,
+                    Instaladores...
+                  </p>
+                </div>
               </div>
-            </div>
-            <div class="col-sm-4 text-center text-lg-left">
-              <div
-                class="services-box pb-lg-0"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <img
-                  src="/assets/img/icons-clientes.png"
-                  alt="growth-strategy"
-                  data-aos="zoom-in"
-                />
-                <h6 class="text-dark mb-3 mt-4 font-weight-medium">Clientes</h6>
-                <p>
-                  Te damos un acceso exclusivo a nuestra web para que siempre
-                  puedas tener todo actualizado. Documentacion, Instaladores...
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-4 text-center text-lg-left">
-              <div
-                class="services-box pb-0"
-                data-aos="fade-down"
-                data-aos-easing="linear"
-                data-aos-duration="1500"
-              >
-                <img
-                  src="/assets/img/icons-contact.png"
-                  alt="saving-strategy"
-                  data-aos="zoom-in"
-                />
-                <h6 class="text-dark mb-3 mt-4 font-weight-medium">
-                  Comunicacion
-                </h6>
-                <p>
-                  Estamos para vos siempre con todos las vias de comunicacion.
-                  Consultas, Postventa, Soporte...
-                </p>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box pb-0"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-contact.png"
+                    alt="saving-strategy"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Comunicacion
+                  </h6>
+                  <p>
+                    Estamos para vos siempre con todos las vias de comunicacion.
+                    Consultas, Postventa, Soporte...
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -268,7 +262,7 @@
       <section class="our-process" id="aboutService">
         <div class="container">
           <div class="row">
-            <ul ngbNav #nav="ngbNav" class="nav-pills" orientation="vertical">
+            <ul ngbNav #nav="ngbNav" class="nav-pills">
               <li [ngbNavItem]="1">
                 <a ngbNavLink>Web</a>
                 <ng-template ngbNavContent>
@@ -630,60 +624,62 @@
         </div>
       </section>
       <section class="contactus" id="contact">
-        <div class="container">
-          <div class="row mb-5 pb-5">
-            <div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
-              <img
-                src="/assets/images/contact.jpg"
-                alt="contact"
-                class="img-fluid"
-              />
-            </div>
-            <div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
-              <h3 class="font-weight-medium text-dark mt-5 mt-lg-0">
-                ¿Consultas?
-              </h3>
-              <h5 class="text-dark mb-5">
-                Escribinos aca y te contestamos a la brevedad
-              </h5>
-              <form>
-                <div class="row">
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="name"
-                        placeholder="Nombre*"
-                      />
+        <div class="div-color">
+          <div class="container">
+            <div class="row mb-5 pb-5">
+              <div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
+                <img
+                  src="/assets/images/contact.png"
+                  alt="contact"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
+                <h3 class="font-weight-medium text-dark mt-5 mt-lg-0">
+                  ¿Consultas?
+                </h3>
+                <h5 class="text-dark mb-5">
+                  Escribinos aca y te contestamos a la brevedad
+                </h5>
+                <form>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Nombre*"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="mail"
+                          placeholder="Email*"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <textarea
+                          name="message"
+                          id="message"
+                          class="form-control"
+                          placeholder="Mensaje*"
+                          rows="5"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <a href="#" class="btn btn-secondary">Enviar</a>
                     </div>
                   </div>
-                  <div class="col-sm-6">
-                    <div class="form-group">
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="mail"
-                        placeholder="Email*"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <div class="form-group">
-                      <textarea
-                        name="message"
-                        id="message"
-                        class="form-control"
-                        placeholder="Mensaje*"
-                        rows="5"
-                      ></textarea>
-                    </div>
-                  </div>
-                  <div class="col-sm-12">
-                    <a href="#" class="btn btn-secondary">Enviar</a>
-                  </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
         </div>
@@ -695,53 +691,58 @@
           <div class="d-flex justify-content-between align-items-center">
             <div class="d-flex align-items-center">
               <img src="assets/img/logo1Close.png" alt="logo" class="mr-3" />
-              <p class="mb-0 text-small pt-1">
-                © 2020
-                <a
-                  href="https://www.sistemy.com.ar"
-                  class="text-white"
-                  target="_blank"
-                  >Sistemy</a
-                >. All rights reserved.
-              </p>
             </div>
-                  <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <address>
-                <div class="d-flex align-items-center">
-                  <a href="mailto:Sistemy@yourmail.com" class="footer-link"
-                    >info@sistemy.com</a
-                  >
-                </div>
-              </address>
-              <div class="social-icons">
-                <h6 class="footer-title font-weight-bold">Encontranos en</h6>
-                <div class="d-flex">
-                  <a href="#"><i class="mdi mdi-github-circle"></i></a>
-                  <a href="#"><i class="mdi mdi-facebook-box"></i></a>
-                  <a href="#"><i class="mdi mdi-twitter"></i></a>
-                  <a href="#"><i class="mdi mdi-dribbble"></i></a>
+
+            <p class="mb-0 text-small pt-1">
+              © 2020
+              <a
+                href="https://www.sistemy.com.ar"
+                class="text-white"
+                target="_blank"
+                >Sistemy</a
+              >. All rights reserved.
+            </p>
+
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <address>
+                      <div class="d-flex align-items-center">
+                        <a
+                          href="mailto:Sistemy@yourmail.com"
+                          class="footer-link"
+                          >info@sistemy.com</a
+                        >
+                      </div>
+                    </address>
+                    <div class="social-icons">
+                      <h6 class="footer-title font-weight-bold">
+                        Encontranos en
+                      </h6>
+                      <div class="d-flex">
+                        <a href="#"><i class="mdi mdi-github-circle"></i></a>
+                        <a href="#"><i class="mdi mdi-facebook-box"></i></a>
+                        <a href="#"><i class="mdi mdi-twitter"></i></a>
+                        <a href="#"><i class="mdi mdi-dribbble"></i></a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-small text-white mx-2 footer-link"
+                          >Rosario
+                        </a>
+                        <a class="text-small text-white mx-2 footer-link"
+                          >Santa Fe
+                        </a>
+                        <a class="text-small text-white mx-2 footer-link"
+                          >Argentina
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-            <div>
-              <div class="d-flex">
-                <a class="text-small text-white mx-2 footer-link"
-                  >Rosario
-                </a>
-                <a  class="text-small text-white mx-2 footer-link"
-                  >Santa Fe
-                </a>
-                <a  class="text-small text-white mx-2 footer-link"
-                  >Argentina
-                </a>
-              </div>
-            </div>
+            <div></div>
           </div>
         </div>
       </div>
