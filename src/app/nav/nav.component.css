@@ -1,0 +1,51 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background-color: rgba(194, 201, 204, 0.9);
+}
+
+.hidden {
+  display: none;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgba(194, 201, 204, 0.7);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.navButton {
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+  color: black;
+  font-size: large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  height: 64px;
+  width: 90px;
+  text-align: center;
+}
+
+.navButton:hover {
+  display: inline-block;
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-color: black;
+  color: #def2f1;
+  height: 64px;
+  width: 90px;
+  transition: 0.9s;
+}

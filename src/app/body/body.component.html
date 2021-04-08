@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Sistemy</title>
+    <link
+      rel="stylesheet"
+      href="/assets/vendors/mdi/css/materialdesignicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendors/owl.carousel/css/owl.carousel.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/assets/vendors/owl.carousel/css/owl.theme.default.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="/assets/vendors/jquery-flipster//assets/css/jquery.flipster.css"
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="shortcut icon" href="/assets/images/favicon.png" />
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <div id="mobile-menu-overlay"></div>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="assets/img/logo3.png" alt="Sistemy"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTogglerDemo01"
+          aria-controls="navbarTogglerDemo01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          (click)="isCollapsed = !isCollapsed"
+        >
+          <span class="navbar-toggler-icon"><i class="mdi mdi-menu"> </i></span>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarTogglerDemo01"
+          [ngbCollapse]="isCollapsed"
+        >
+          <div
+            class="d-lg-none d-flex justify-content-between px-4 py-3 align-items-center"
+          >
+            <p>Menu</p>
+            <a (click)="isCollapsed = !isCollapsed" class="close-menu"
+              ><i class="mdi mdi-close"></i
+            ></a>
+          </div>
+          <ul class="navbar-nav ml-auto align-items-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="#home"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutService">Que Ofrecemos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="">Acceso a Clientes</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="page-body-wrapper">
+      <section id="home" class="home">
+        <div>
+          <video
+            preload="auto"
+            width="100%"
+            style="margin-top: 0px; margin-bottom: 20px"
+            autoPlay
+            loop
+            [muted]="true"
+          >
+            <source src="\assets\img\video.mp4" type="video/mp4" />
+            <source src="\assets\img\video.ogg" type="video/ogg" />
+            <p>Your browser does not support H.264/MP4.</p>
+          </video>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="d-sm-flex justify-content-between">
+                <div class="mt-5 mt-lg-0">
+                  <img
+                    src="/assets/img/Software Suite.jpg"
+                    alt="marsmello"
+                    class="img-fluid"
+                    data-aos="zoom-in-up"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="our-services" id="services">
+        <div class="div-color">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12">
+                <h5 class="text-dark">¿Que ofrecemos?</h5>
+                <h3 class="font-weight-medium text-dark mb-5">
+                  Algunos de nuestros servicios
+                </h3>
+              </div>
+            </div>
+            <div class="row" data-aos="fade-up" scrollBar:true>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-web.png"
+                    alt="integrated-marketing"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Diseño Web
+                  </h6>
+                  <p>
+                    Diseñamos y adaptamos una web a tus necesidades. Estaticas,
+                    Marketplaces, Portfolios...
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-sistemas.png"
+                    alt="design-development"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Desarrollo de Sistemas
+                  </h6>
+                  <p>
+                    Desde pequeños hasta grandes y complejos sistemas. Sistemas
+                    de Cobro, Stock, Automatizaciones...
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-cloud.png"
+                    alt="digital-strategy"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">Cloud</h6>
+                  <p>
+                    Servidores en tu negocio? No, mejor Cloud. Podemos
+                    acesorarte y contarte la infinidad de posibilidades...
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row" data-aos="fade-up">
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box pb-lg-0"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-consultoria.png"
+                    alt="digital-marketing"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Consultoria
+                  </h6>
+                  <p>
+                    Podemos brindarte la mejor solucion y optimizar tu negocio.
+                    Mejora de Procesos, Agile...
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box pb-lg-0"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-clientes.png"
+                    alt="growth-strategy"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Clientes
+                  </h6>
+                  <p>
+                    Te damos un acceso exclusivo a nuestra web para que siempre
+                    puedas tener todo actualizado. Documentacion,
+                    Instaladores...
+                  </p>
+                </div>
+              </div>
+              <div class="col-sm-4 text-center text-lg-left">
+                <div
+                  class="services-box pb-0"
+                  data-aos="fade-down"
+                  data-aos-easing="linear"
+                  data-aos-duration="1500"
+                >
+                  <img
+                    src="/assets/img/icons-contact.png"
+                    alt="saving-strategy"
+                    data-aos="zoom-in"
+                  />
+                  <h6 class="text-dark mb-3 mt-4 font-weight-medium">
+                    Comunicacion
+                  </h6>
+                  <p>
+                    Estamos para vos siempre con todos las vias de comunicacion.
+                    Consultas, Postventa, Soporte...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="our-process" id="aboutService">
+        <div class="container">
+          <div class="row">
+            <ul ngbNav #nav="ngbNav" class="nav-pills">
+              <li [ngbNavItem]="1">
+                <a ngbNavLink>Web</a>
+                <ng-template ngbNavContent>
+                  <h5 class="text-dark">Diseño y soporte</h5>
+                  <h3 class="font-weight-medium text-dark">
+                    La Web que necesitas
+                  </h3>
+                  <h5 class="text-dark mb-3">
+                    Te acesoramos para que elijas lo que mejor se adapte a vos
+                  </h5>
+                  <p class="font-weight-medium mb-4">
+                    Existen varios tipos de web, <br />
+                    y cada una cuenta con las herramientas para distintos
+                    proyectos.<br />
+                    Algunas de ellas:
+                  </p>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      SPA: Paginas creadas en una sola pagina, recomendada para
+                      Publicidad, WebCV, Portfolio, Punto de Contacto.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Dinamica: Suelen tener varias secciones. Se usan
+                      comunmente en Redes y/o Blogs, Marketplace, Paginas
+                      Empresariales.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      API: Una API es una interfaz de programación de
+                      aplicaciones.<br />
+                      Gracias a esta se puede tener acceso a un sistema y su
+                      base de datos.<br />
+                      Permite conectar por ejemplo Aplicaciones moviles, Webs,
+                      Sistemas.
+                    </p>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="2">
+                <a ngbNavLink>Sistemas</a>
+                <ng-template ngbNavContent>
+                  <h5 class="text-dark">Analisis, Diseño y Soporte</h5>
+                  <h3 class="font-weight-medium text-dark">
+                    Un sistema a medida
+                  </h3>
+                  <h5 class="text-dark mb-3">Ahorrando tiempo y dinero</h5>
+                  <p class="font-weight-medium mb-4">
+                    Errores en procesos humanos, tiempo de ejecucion <br />
+                    entre otras cosas pueden ser evitados y mejorados con las
+                    herramientas correctas
+                  </p>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Sistemas a medida para resolver cosas como<br />
+                      Control de Stock, Pago a proveedores, Ventas, Informes y/o
+                      reportes bancarios.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Mejora de sistemas ya existentes en forma externa al mismo
+                      agregando modulos que complementen a lo existente.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Integracion de Sistemas que se encuentren implementados
+                      para que<br />
+                      puedan trabajar entre si o con algun sistema externo a la
+                      empresa.
+                      <br /><br />
+                    </p>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="3">
+                <a ngbNavLink>Cloud</a>
+                <ng-template ngbNavContent>
+                  <h5 class="text-dark">Cloud computing</h5>
+                  <h3 class="font-weight-medium text-dark">
+                    Un servidor propio pero en la nube
+                  </h3>
+                  <h5 class="text-dark mb-3">mas barato y mas seguro.</h5>
+                  <p class="font-weight-medium mb-4">
+                    Ya sea que tenes pensado tener una infrestructura local o
+                    <br />
+                    ya la tenes y la necesitas expandir. Podemos lograr muchas
+                    cosas, podriamos dividirlas en 3.
+                  </p>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Infraestructure-as-a-Service (IaaS): Se ofrece maquinas
+                      virtuales y espacio de almacenamiento,<br />
+                      el resto lo controlas vos.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Platform-as-a-Service (PaaS): minimas configuraciones de
+                      infrestructura,<br />
+                      escalavilidad rapida segun la necesidad.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Software-as-a-Service (SaaS): Todo se encarga el
+                      proveedor, <br />para asegurarte el servicio de calidad
+                      que necesitas.
+                    </p>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="4">
+                <a ngbNavLink>Consultoria</a>
+                <ng-template ngbNavContent>
+                  <h5 class="text-dark">Optimizando Procesos</h5>
+                  <h3 class="font-weight-medium text-dark">
+                    Lo que se puede medir
+                  </h3>
+                  <h5 class="text-dark mb-3">se puede mejorar</h5>
+                  <p class="font-weight-medium mb-4">
+                    No solo los procesos informaticos se mejoran, <br />
+                    la forma de trabajar tambien. Se puede realizar de muchas
+                    formas, estas son algunas de ellas
+                  </p>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Agile: Metodologia de trabajo que comenzo en el area de
+                      sistemas y hoy se implementa en todos lados.<br />
+                      Podemos ayudarte a implementarla a tu empresa o sector.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Mejora de procesos: Analizar la forma de trabajo y las
+                      herramientas utilizadas.<br />Podemos ayudarte a elegir
+                      herramientas, a acortar los procesos o estandarizarlos.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Metricas: Diseño de tableros de control para poder
+                      detectar fallas y posibles puntos a mejorar.
+                      <br /><br />
+                    </p>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="5">
+                <a ngbNavLink>Clientes</a>
+                <ng-template ngbNavContent>
+                  <h5 class="text-dark">Tu Lugar</h5>
+                  <h3 class="font-weight-medium text-dark">
+                    Un lugar donde gestionar tus cosas
+                  </h3>
+                  <h5 class="text-dark mb-3">
+                    como sos parte de nosotros, tenemos un lugar para vos
+                  </h5>
+                  <p class="font-weight-medium mb-4">
+                    Con el tiempo se puede generar muchas <br />
+                    cosas las que necesitan tu seguimiento, <br />por eso nos
+                    encargamos de tener un lugar con tus cosas.
+                  </p>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">Proyectos realizados con nosostros.</p>
+                  </div>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">Documentacion generada por proyecto.</p>
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Instaladores y versionados.<br /><br /><br />
+                    </p>
+                  </div>
+                </ng-template>
+              </li>
+              <li [ngbNavItem]="6">
+                <a ngbNavLink>Contacto</a>
+                <ng-template ngbNavContent>
+                  <h5 class="text-dark">Pilares de comunicacion</h5>
+                  <h3 class="font-weight-medium text-dark">
+                    No hay mejor forma de estar alineados
+                  </h3>
+                  <h5 class="text-dark mb-3">que estando comunicados.</h5>
+                  <p class="font-weight-medium mb-4">
+                    Como nos interesa tus necesidades, <br />
+                    tus problemas y consultas, contamos con tres pilares de
+                    comunicacion.
+                  </p>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Estamos para cualquier duda sobre nuestros servicios que
+                      tengas,<br />
+                      inclusive para aconsejarte sobre esa idea que tenes en
+                      mente.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start mb-3">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Con Agile una vez que empezamos un proyecto, te entregamos
+                      documentacion <br />constante para que veas el desarrollo
+                      de eso que estamos creando juntos.
+                    </p>
+                  </div>
+                  <div class="d-flex justify-content-start">
+                    <img
+                      src="/assets/images/tick.png"
+                      alt="tick"
+                      class="mr-3 tick-icon"
+                    />
+                    <p class="mb-0">
+                      Una vez terminado estamos ahi para lo que necesites,<br />
+                      cualquier pregunta o consulta podras hacerlo con tu acceso
+                      exclusivo.
+                    </p>
+                  </div>
+                </ng-template>
+              </li>
+            </ul>
+            <div [ngbNavOutlet]="nav" class="mt-2"></div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="clients pt-5 mt-5"
+        data-aos="fade-up"
+        data-aos-offset="-400"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="d-sm-flex justify-content-between align-items-center">
+                <img
+                  src="assets/img/microsoft-azure.png"
+                  alt="azure"
+                  class="p-2 p-lg-0"
+                  data-aos="fade-down"
+                  data-aos-offset="-400"
+                />
+                <img
+                  src="assets/img/net.png"
+                  alt="net"
+                  class="p-2 p-lg-0"
+                  data-aos="fade-up"
+                  data-aos-offset="-400"
+                />
+                <img
+                  src="assets/img/angular.png"
+                  alt="angular"
+                  class="p-2 p-lg-0"
+                  data-aos="fade-down"
+                  data-aos-offset="-400"
+                />
+                <img
+                  src="assets/img/node.png"
+                  alt="node"
+                  class="p-2 p-lg-0"
+                  data-aos="fade-up"
+                  data-aos-offset="-400"
+                />
+                <img
+                  src="assets/img/agile.png"
+                  alt="agile"
+                  class="p-2 p-lg-0"
+                  data-aos="fade-down"
+                  data-aos-offset="-400"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contactus" id="contact">
+        <div class="div-color">
+          <div class="container">
+            <div class="row mb-5 pb-5">
+              <div class="col-sm-5" data-aos="fade-up" data-aos-offset="-500">
+                <img
+                  src="/assets/images/contact.png"
+                  alt="contact"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="col-sm-7" data-aos="fade-up" data-aos-offset="-500">
+                <h3 class="font-weight-medium text-dark mt-5 mt-lg-0">
+                  ¿Consultas?
+                </h3>
+                <h5 class="text-dark mb-5">
+                  Escribinos aca y te contestamos a la brevedad
+                </h5>
+                <form>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Nombre*"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="form-group">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="mail"
+                          placeholder="Email*"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <div class="form-group">
+                        <textarea
+                          name="message"
+                          id="message"
+                          class="form-control"
+                          placeholder="Mensaje*"
+                          rows="5"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-12">
+                      <a href="#" class="btn btn-secondary">Enviar</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+              <img src="assets/img/logo1Close.png" alt="logo" class="mr-3" />
+            </div>
+
+            <p class="mb-0 text-small pt-1">
+              © 2020
+              <a
+                href="https://www.sistemy.com.ar"
+                class="text-white"
+                target="_blank"
+                >Sistemy</a
+              >. All rights reserved.
+            </p>
+
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <address>
+                      <div class="d-flex align-items-center">
+                        <a
+                          href="mailto:Sistemy@yourmail.com"
+                          class="footer-link"
+                          >info@sistemy.com</a
+                        >
+                      </div>
+                    </address>
+                    <div class="social-icons">
+                      <h6 class="footer-title font-weight-bold">
+                        Encontranos en
+                      </h6>
+                      <div class="d-flex">
+                        <a href="#"><i class="mdi mdi-github-circle"></i></a>
+                        <a href="#"><i class="mdi mdi-facebook-box"></i></a>
+                        <a href="#"><i class="mdi mdi-twitter"></i></a>
+                        <a href="#"><i class="mdi mdi-dribbble"></i></a>
+                      </div>
+                      <div class="d-flex">
+                        <a class="text-small text-white mx-2 footer-link"
+                          >Rosario
+                        </a>
+                        <a class="text-small text-white mx-2 footer-link"
+                          >Santa Fe
+                        </a>
+                        <a class="text-small text-white mx-2 footer-link"
+                          >Argentina
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/assets/vendors/base/vendor.bundle.base.js"></script>
+    <script src="/assets/vendors/owl.carousel/js/owl.carousel.js"></script>
+    <script src="/assets/vendors/jquery-flipster/js/jquery.flipster.min.js"></script>
+    <script src="/assets/js/template.js"></script>
+  </body>
+</html>
